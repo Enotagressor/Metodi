@@ -4,9 +4,10 @@ public class Main {
         System.out.println("=================================================================");
     }
  //Zadanie1
-    public static boolean checkLeapYear (int year){
-        return year %4 == 0;
-    }
+ public static boolean checkLeapYear (int year){
+     return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+ }
+
     public static void printLeapYearResult (int year, boolean leapYear){
         if (leapYear){
             System.out.println(year + " високосный год");
@@ -68,8 +69,8 @@ public class Main {
     }
     public static void main(String[] args) {
         //Z1
-        int visokosniiYear = 2021;
-        printLeapYear(visokosniiYear);
+        int year = 300;
+        printLeapYear(year);
 
             printSeparator();
         //Z2
